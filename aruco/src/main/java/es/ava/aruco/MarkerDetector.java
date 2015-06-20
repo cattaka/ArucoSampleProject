@@ -65,6 +65,7 @@ public class MarkerDetector {
 
 		// pass a copy because it modifies the src image
 		thres.copyTo(thres2);
+		contours2.clear();
 		Imgproc.findContours(thres2, contours2, hierarchy2, Imgproc.RETR_TREE, Imgproc.CHAIN_APPROX_SIMPLE);
 		
 		// uncomment the following line if you want the contours drawn
